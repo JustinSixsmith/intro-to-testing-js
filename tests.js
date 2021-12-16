@@ -81,4 +81,24 @@ describe("isEven", function () {
     it('should return true when passed -4', function () {
         expect(isEven(-4)).toBe(true);
     })
+    it('should return false when passed string "banana"', function () {
+        expect(isEven("banana")).toBe(false);
+    })
+    it('should return true when passed string "8"', function () {
+        expect(isEven("8")).toBe(true);
+    })
+    it('should return false when passed infinity', function () {
+        expect(isEven(Infinity)).toBe(false);
+    })
+    it('should return false when passed a boolean', function () {
+        expect(isEven(true)).toBe(false);
+    })
+    it('should return false when no parameter is given', function () {
+        expect(isEven()).toBe(false);
+    })
+})
+
+
+describe('isVowel', function () {
+
 })
