@@ -22,5 +22,14 @@ function isFive(hopefullyFive) {
 
 
 function isEven(hopefullyEven) {
-    return (parseFloat(hopefullyEven)% 2 === 0);
+    return (parseFloat(hopefullyEven) % 2 === 0);
+}
+
+
+function isVowel(char) {
+    if (typeof char === "string") {
+        return char.toLowerCase() === "a" || char.toLowerCase() === "e" || char.toLowerCase() === "i" || char.toLowerCase() === "O" || char.toLowerCase() === "U";
+    } else {
+    return false;
+    }
 }
