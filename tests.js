@@ -124,5 +124,35 @@ describe('isVowel', function () {
     it('should return false when passed "banana"', function () {
         expect(isVowel("banana")).toBe(false);
     })
+})
 
+
+describe('add', function () {
+    it('should be defined as a function', function () {
+        expect(typeof add).toBe("function");
+    })
+    it('should return 5 when adding 2 and 3', function () {
+        expect(add(2, 3)).toBe(5);
+    })
+    it('should return -12 when adding -3 and -9', function () {
+        expect(add(-3, -9)).toBe(-12);
+    })
+    it('should return 11 when adding string "5" and 6', function () {
+        expect(add("5", 6)).toBe(11);
+    })
+    it('should return 6 when adding strings "-4" and "10"', function () {
+        expect(add("-4", "10")).toBe(6);
+    })
+    it('should return "banana" and "split" as NaN', function () {
+        let result1 = add("banana", "split");
+        expect(isNaN(result1)).toBe(true);
+    })
+    it('should return 2 and "apples" as NaN', function () {
+        let result2 = add(2, "apples");
+        expect(isNaN(result2)).toBe(true);
+    })
+    it('should return an empty parameter as NaN', function () {
+        let result3 = add();
+        expect(isNaN(result3)).toBe(true);
+    })
 })
